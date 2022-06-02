@@ -65,7 +65,16 @@ include_once "functions.php";
                     <label for="cb1" class="label-inline">Some Checkbox</label>
                 </div>
 
-                
+                <label for="" class="label">Select Some Fruits</label>
+
+                <input type="checkbox"  value="orange"  >
+                <label for="" class="label-inline">Orange</label><br>
+                <input type="checkbox"  value="mango"  >
+                <label for="" class="label-inline">Mango</label><br>
+                <input type="checkbox"  value="banana"  >
+                <label for="" class="label-inline">Banana</label><br>
+                <input type="checkbox"  value="lemon"  >
+                <label for="" class="label-inline">Lemon</label><br>
 
                 <button type="submit">Submit</button>
             </form>
