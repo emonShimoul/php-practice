@@ -36,10 +36,14 @@ include_once "functions.php";
                     }
                     ?>
                     <?php if( isset($_POST['fname']) && !empty($_POST['fname']) ) {
-                        $fname = htmlspecialchars($_POST['fname']);
+                        // $fname = htmlspecialchars($_POST['fname']);
+                        // $fname = filter_input(INPUT_POST,'fname',FILTER_SANITIZE_STRING);
+                        $fname = filter_input(INPUT_POST,'fname',FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                     } ?>
                     <?php if( isset($_POST['lname']) && !empty($_POST['lname']) ) {
-                        $lname = htmlspecialchars($_POST['lname']);
+                        // $lname = htmlspecialchars($_POST['lname']);
+                        // $lname = filter_input(INPUT_POST,'lname',FILTER_SANITIZE_STRING);
+                        $lname = filter_input(INPUT_POST,'lname',FILTER_SANITIZE_FULL_SPECIAL_CHARS);
                     } ?>
                 </p>
                 <p>
@@ -60,6 +64,8 @@ include_once "functions.php";
                     <input type="checkbox" name="cb1" id="cb1" value="1" <?php echo $checked ?> >
                     <label for="cb1" class="label-inline">Some Checkbox</label>
                 </div>
+
+                
 
                 <button type="submit">Submit</button>
             </form>
