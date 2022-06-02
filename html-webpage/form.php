@@ -67,13 +67,13 @@ include_once "functions.php";
 
                 <label for="" class="label">Select Some Fruits</label>
 
-                <input type="checkbox"  value="orange"  >
+                <input type="checkbox" name="fruits[]" value="orange" <?php isChecked('fruits', 'orange') ?> >
                 <label for="" class="label-inline">Orange</label><br>
-                <input type="checkbox"  value="mango"  >
+                <input type="checkbox" name="fruits[]" value="mango" <?php isChecked('fruits', 'mango') ?> >
                 <label for="" class="label-inline">Mango</label><br>
-                <input type="checkbox"  value="banana"  >
+                <input type="checkbox" name="fruits[]" value="banana" <?php isChecked('fruits', 'banana') ?> >
                 <label for="" class="label-inline">Banana</label><br>
-                <input type="checkbox"  value="lemon"  >
+                <input type="checkbox" name="fruits[]" value="lemon" <?php isChecked('fruits', 'lemon') ?> >
                 <label for="" class="label-inline">Lemon</label><br>
 
                 <button type="submit">Submit</button>
