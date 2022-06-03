@@ -7,12 +7,12 @@ function isChecked($inputName, $value){
 }
 
 function displayOptions($options, $selectedValues){
-foreach($options as $option){
-    $option = strtolower($option);
-    $selected = '';
-    if(in_array($option, $selectedValues)){
-        $selected = 'selected';
+    foreach($options as $option){
+        $option = strtolower($option);
+        $selected = '';
+        if(in_array($option, $selectedValues)){
+            $selected = 'selected';
+        }
+        printf("<option value='%s' %s>%s</option>",$option,$selected,ucwords($option));
     }
-    printf("<option value='%s' %s>%s</option>",$option,$selected,ucwords($option));
-}
 }
