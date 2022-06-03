@@ -15,7 +15,11 @@ $fruits = ["mango", "apple", "Banana", "orange", "grape"];
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
 
-    
+    <style>
+        body{
+            margin-top:30px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
