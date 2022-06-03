@@ -29,7 +29,14 @@ $fruits = ["mango", "apple", "Banana", "orange", "grape"];
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quaerat enim eligendi eaque alias? Doloremque odio molestias magnam sequi numquam. Sit atque necessitatibus dolorum autem? Adipisci soluta nostrum quidem nobis.</p>
 
                 <p>
+                    <?php
+                    // $sfruits = isset($_POST['fruits'] ?? array());
+                    $sfruits = filter_input(INPUT_POST,'fruits',FILTER_SANITIZE_STRING,FILTER_REQUIRE_ARRAY);
                     
+                    if(count($sfruits)>0){
+                        echo "You have selected: ".join(", ",$sfruits);
+                    }
+                    ?>
                 </p>
             </div>
         </div>
@@ -40,7 +47,7 @@ $fruits = ["mango", "apple", "Banana", "orange", "grape"];
                     <label for="fruits">Select Some Fruits</label>
                     <select style="height:200px;" name="fruits[]" id="fruits" multiple>
                         <option value="" disabled selected>Select Some Fruits</option>
-                        
+                        <?php displayOptions($fruits, $sfruits) ?>
                     </select>
                     <button type="submit">Submit</button>
                 </form>
