@@ -1,6 +1,13 @@
 <?php
+$allowedTypes = array(
+    'image/png',
+    'image/jpg',
+    'image/jpeg'
+);
 if($_FILES['photo']){
-    move_uploaded_file($_FILES['photo']['tmp_name'], "files/image.png");
+    if( in_array($_FILES['photo']['type'], $allowedTypes) !== false && $_FILES['photo']['size'] < 5*1024 ){
+        move_uploaded_file($_FILES['photo']['tmp_name'], "files/".$_FILES['photo']['name']);
+    }
 }
 ?>
 
